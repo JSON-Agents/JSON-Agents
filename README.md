@@ -186,7 +186,6 @@ See [`packages/cli/README.md`](packages/cli/README.md) for full documentation.
 |----------|--------|---------|---------------|----------|
 | **Python** | ✅ Production Ready | v1.0.0 | 100% | [`validators/python/`](validators/python/) |
 | **TypeScript** | ✅ Production Ready | v1.0.0 | 100% | [`validators/typescript/`](validators/typescript/) |
-| Rust | 🔜 Coming Soon | - | - | - |
 | Go | 🔜 Coming Soon | - | - | - |
 
 **Python Validator:**
