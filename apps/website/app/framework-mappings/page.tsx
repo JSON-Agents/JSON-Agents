@@ -75,8 +75,8 @@ export default function FrameworkMappingsPage() {
       {/* Navigation */}
       <nav className="bg-slate-900">
         <div className="w-full max-w-7xl mx-auto px-8 py-4 flex justify-between items-center">
-          <a href="/">
-            <img src="/images/jsonagents-no-background-logo.webp" alt="JSON AGENTS" className="h-8 invert" />
+          <a href="/" className="text-white text-2xl font-bold">
+            JSON Agents
           </a>
           <div className="flex space-x-8">
             <a href="/getting-started" className="text-white hover:text-gray-200 text-base font-medium">Getting Started</a>

@@ -3,20 +3,20 @@ import "./globals.css";
 import DraftToast from "./components/DraftToast";
 
 export const metadata: Metadata = {
-  title: "JSON AGENTS - Portable Agent Manifest Specification",
+  title: "JSON Agents - Portable Agent Manifest Specification",
   description: "A universal JSON-native standard for describing AI agents, their capabilities, tools, runtimes, and governance in a portable, framework-agnostic format.",
   metadataBase: new URL('https://agents-json-website.pages.dev'),
   openGraph: {
-    title: "JSON AGENTS - Portable Agent Manifest Specification",
+    title: "JSON Agents - Portable Agent Manifest Specification",
     description: "A universal JSON-native standard for describing AI agents, their capabilities, tools, runtimes, and governance in a portable, framework-agnostic format.",
     url: 'https://agents-json-website.pages.dev',
-    siteName: 'JSON AGENTS',
+    siteName: 'JSON Agents',
     images: [
       {
         url: '/images/jsonagents-banner-1.webp',
         width: 1536,
         height: 1024,
-        alt: 'JSON AGENTS - Portable Agent Manifest Specification',
+        alt: 'JSON Agents - Portable Agent Manifest Specification',
       },
     ],
     locale: 'en_US',
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "JSON AGENTS - Portable Agent Manifest Specification",
+    title: "JSON Agents - Portable Agent Manifest Specification",
     description: "A universal JSON-native standard for describing AI agents, their capabilities, tools, runtimes, and governance in a portable, framework-agnostic format.",
     images: ['/images/jsonagents-banner-1.webp'],
   },

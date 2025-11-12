@@ -16,7 +16,7 @@ export default function QuickLinks({ links }: QuickLinksProps) {
     <section className="mt-16 pt-12 border-t border-gray-200">
       <div className="mb-8">
         <h2 className="text-2xl font-semibold text-gray-900 mb-2">Related Resources</h2>
-        <p className="text-sm text-gray-600">Continue exploring JSON AGENTS</p>
+        <p className="text-sm text-gray-600">Continue exploring JSON Agents</p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
