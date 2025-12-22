@@ -97,7 +97,7 @@ export default function UriSchemePage() {
             </aside>
 
             {/* Main Content */}
-            <div className="flex-1">
+            <div className="flex-1 min-w-0">
 
           {/* Purpose */}
           <div className="mb-16">

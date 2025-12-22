@@ -130,7 +130,7 @@ export default function SpecDraftPage() {
               </aside>
 
               {/* Main Content */}
-              <article className="markdown-content flex-1 max-w-4xl">
+              <article className="markdown-content flex-1 min-w-0 max-w-4xl">
                 <ReactMarkdown
                   remarkPlugins={[remarkGfm]}
                   rehypePlugins={[rehypeSlug, rehypeHighlight]}

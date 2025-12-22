@@ -86,7 +86,7 @@ export default function GettingStartedPage() {
             </aside>
 
             {/* Main Content */}
-            <div className="flex-1">
+            <div className="flex-1 min-w-0">
 
           {/* Quick Steps */}
           <div className="mb-16">
@@ -144,7 +144,7 @@ export default function GettingStartedPage() {
                   <p className="text-sm text-gray-700 mb-2">
                     Download the schema:
                   </p>
-                  <code className="block bg-white p-3 rounded text-sm text-slate-800 mb-4">
+                  <code className="block bg-white p-3 rounded text-sm text-slate-800 mb-4 overflow-x-auto">
                     wget https://json-agents.org/Standard/schema/json-agents.json
                   </code>
                   <p className="text-sm text-gray-700 mb-2">

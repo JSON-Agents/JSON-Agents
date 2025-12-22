@@ -122,7 +122,7 @@ export default function ExtensionsPage() {
             </aside>
 
             {/* Main Content */}
-            <article className="prose prose-slate max-w-none flex-1">
+            <article className="prose prose-slate max-w-none flex-1 min-w-0">
               <ReactMarkdown
               remarkPlugins={[remarkGfm]}
               rehypePlugins={[rehypeSlug, rehypeRaw, rehypeHighlight]}
