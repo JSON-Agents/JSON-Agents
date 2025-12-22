@@ -1,36 +1,23 @@
 "use client";
 
 import { Github } from "lucide-react";
+import Navbar from "./components/Navbar";
 
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Navigation */}
-      <nav className="bg-slate-900">
-        <div className="w-full max-w-7xl mx-auto px-8 py-4 flex justify-between items-center">
-          <a href="/" className="text-white text-2xl font-bold">
-            JSON Agents
-          </a>
-          <div className="flex space-x-8">
-            <a href="/getting-started" className="text-white hover:text-gray-200 text-base font-medium">Getting Started</a>
-            <a href="/schema" className="text-white hover:text-gray-200 text-base font-medium">Schema</a>
-            <a href="/docs" className="text-white hover:text-gray-200 text-base font-medium">Docs</a>
-            <a href="https://github.com/JSON-AGENTS/Standard" className="text-white hover:text-gray-200 flex items-center gap-2" aria-label="GitHub">
-              <Github size={24} strokeWidth={2} />
-            </a>
-          </div>
-        </div>
-      </nav>
+      <Navbar />
 
       {/* Hero Section */}
-      <section className="bg-slate-900 py-32">
-        <div className="w-full max-w-3xl mx-auto px-8 text-center">
+      <section className="bg-slate-900 py-20 md:py-32">
+        <div className="w-full max-w-3xl mx-auto px-4 md:px-8 text-center">
 
-          <h1 className="text-6xl font-bold text-white mb-6">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             JSON Agents
           </h1>
 
-          <p className="text-lg text-white mb-8 leading-relaxed">
+          <p className="text-base md:text-lg text-white mb-8 leading-relaxed">
             A universal JSON specification for AI agents
           </p>
 
@@ -45,8 +32,8 @@ export default function HomePage() {
 
       {/* Four Columns */}
       <section className="py-10 bg-gray-100">
-        <div className="w-full max-w-6xl mx-auto px-8">
-          <div className="grid grid-cols-2 gap-8">
+        <div className="w-full max-w-6xl mx-auto px-4 md:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 
             <div className="flex flex-col text-center">
               <h2 className="text-2xl mb-5 text-gray-900 font-light">Portable Agent Manifest</h2>
@@ -114,7 +101,7 @@ export default function HomePage() {
 
       {/* Footer */}
       <footer className="bg-white pt-6 pb-8">
-        <div className="w-full max-w-3xl mx-auto px-8 text-center">
+        <div className="w-full max-w-3xl mx-auto px-4 md:px-8 text-center">
           <a
             href="https://github.com/Json-Agents/Standard"
             className="inline-flex items-center gap-2 px-8 py-2 border border-gray-400 text-gray-700 text-xs font-medium uppercase tracking-wider rounded hover:bg-gray-50 transition"

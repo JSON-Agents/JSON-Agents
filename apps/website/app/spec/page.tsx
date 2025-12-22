@@ -9,6 +9,7 @@ import rehypeSlug from 'rehype-slug';
 import 'highlight.js/styles/github.css';
 import QuickLinks from "../components/QuickLinks";
 import Breadcrumbs from "../components/Breadcrumbs";
+import Navbar from "../components/Navbar";
 
 export default function SpecPage() {
   const [content, setContent] = useState("");
@@ -17,7 +18,10 @@ export default function SpecPage() {
 
   useEffect(() => {
     fetch("/Standard/json-agents.md")
-      .then((res) => res.text())
+      .then((res) => {
+        if (!res.ok) throw new Error("Failed to load spec");
+        return res.text();
+      })
       .then((text) => {
         setContent(text);
         setLoading(false);
@@ -76,21 +80,7 @@ export default function SpecPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Navigation */}
-      <nav className="bg-slate-900">
-        <div className="w-full max-w-7xl mx-auto px-8 py-4 flex justify-between items-center">
-          <a href="/" className="text-white text-2xl font-bold">
-            JSON Agents
-          </a>
-          <div className="flex space-x-8">
-            <a href="/getting-started" className="text-white hover:text-gray-200 text-base font-medium">Getting Started</a>
-            <a href="/schema" className="text-white hover:text-gray-200 text-base font-medium">Schema</a>
-            <a href="/docs" className="text-white hover:text-gray-200 text-base font-medium">Docs</a>
-            <a href="https://github.com/JSON-AGENTS/Standard" className="text-white hover:text-gray-200 flex items-center gap-2" aria-label="GitHub">
-              <Github size={24} strokeWidth={2} />
-            </a>
-          </div>
-        </div>
-      </nav>
+      <Navbar />
 
       <Breadcrumbs items={[
         { label: "Docs", href: "/docs" },

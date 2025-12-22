@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import JsonViewer from '@/components/JsonViewer';
 import { Github } from 'lucide-react';
+import Navbar from '../../components/Navbar';
 
 interface JsonViewerClientProps {
   path?: string[];
@@ -61,31 +62,17 @@ export default function JsonViewerClient({ path }: JsonViewerClientProps) {
   return (
     <div className="min-h-screen bg-white">
       {/* Navigation */}
-      <nav className="bg-slate-900">
-        <div className="w-full max-w-7xl mx-auto px-8 py-4 flex justify-between items-center">
-          <a href="/" className="text-white text-2xl font-bold">
-            JSON Agents
-          </a>
-          <div className="flex space-x-8">
-            <a href="/getting-started" className="text-white hover:text-gray-200 text-base font-medium">Getting Started</a>
-            <a href="/schema" className="text-white hover:text-gray-200 text-base font-medium">Schema</a>
-            <a href="/docs" className="text-white hover:text-gray-200 text-base font-medium">Docs</a>
-            <a href="https://github.com/JSON-AGENTS/Standard" className="text-white hover:text-gray-200 flex items-center gap-2" aria-label="GitHub">
-              <Github size={24} strokeWidth={2} />
-            </a>
-          </div>
-        </div>
-      </nav>
+      <Navbar />
 
       {/* Breadcrumb */}
       <div className="bg-gray-200 border-b border-gray-300">
-        <div className="max-w-7xl mx-auto px-8 py-3">
-          <nav className="flex items-center space-x-2 text-sm">
-            <Link href="/" className="text-gray-600 hover:text-gray-900">Home</Link>
+        <div className="max-w-7xl mx-auto px-4 md:px-8 py-3">
+          <nav className="flex items-center space-x-2 text-sm overflow-x-auto">
+            <Link href="/" className="text-gray-600 hover:text-gray-900 whitespace-nowrap">Home</Link>
             <span className="text-gray-500">/</span>
-            <Link href="/schema" className="text-gray-600 hover:text-gray-900">Schema</Link>
+            <Link href="/schema" className="text-gray-600 hover:text-gray-900 whitespace-nowrap">Schema</Link>
             {breadcrumbs.map((crumb, index) => (
-              <div key={index} className="flex items-center space-x-2">
+              <div key={index} className="flex items-center space-x-2 whitespace-nowrap">
                 <span className="text-gray-500">/</span>
                 {crumb.isLast ? (
                   <span className="text-gray-900 font-medium">{crumb.name}</span>

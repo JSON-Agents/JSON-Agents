@@ -6,8 +6,8 @@ import remarkGfm from 'remark-gfm';
 import rehypeHighlight from 'rehype-highlight';
 import rehypeRaw from 'rehype-raw';
 import 'highlight.js/styles/github.css';
-import { Shield, Github, Home } from 'lucide-react';
-import Link from 'next/link';
+import { Shield } from 'lucide-react';
+import Navbar from '../components/Navbar';
 
 export default function CodeOfConductPage() {
   const [markdown, setMarkdown] = useState<string>('');
@@ -29,47 +29,23 @@ export default function CodeOfConductPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Navigation */}
-      <nav className="border-b border-gray-200 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between h-16">
-            <div className="flex">
-              <Link href="/" className="flex items-center px-2 py-2 text-gray-900 hover:text-gray-600">
-                <Home className="h-5 w-5" />
-              </Link>
-              <Link href="/schema" className="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 hover:text-gray-600">
-                Schema
-              </Link>
-              <Link href="/docs" className="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 hover:text-gray-600">
-                Docs
-              </Link>
-            </div>
-            <a 
-              href="https://github.com/JSON-AGENTS/Standard" 
-              className="inline-flex items-center px-4 py-2 text-gray-900 hover:text-gray-600"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Github className="h-5 w-5" />
-            </a>
-          </div>
-        </div>
-      </nav>
+      <Navbar />
 
       {/* Hero Section */}
-      <div className="bg-gray-200 py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <Shield className="mx-auto h-16 w-16 text-slate-800 mb-4" />
-          <h1 className="text-4xl font-light tracking-tight text-slate-900" style={{ fontFamily: 'Momo Trust Display, serif' }}>
+      <div className="bg-gray-200 py-12 md:py-16">
+        <div className="max-w-7xl mx-auto px-4 md:px-8 text-center">
+          <Shield className="mx-auto h-12 w-12 md:h-16 md:w-16 text-slate-800 mb-4" />
+          <h1 className="text-3xl md:text-4xl font-light tracking-tight text-slate-900" style={{ fontFamily: 'Momo Trust Display, serif' }}>
             Code of Conduct
           </h1>
-          <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="mt-4 text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
             Our commitment to fostering an open, welcoming, and inclusive community
           </p>
         </div>
       </div>
 
       {/* Content */}
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div className="max-w-4xl mx-auto px-4 md:px-8 py-8 md:py-12">
         {loading ? (
           <div className="text-center py-12">
             <div className="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-slate-800"></div>

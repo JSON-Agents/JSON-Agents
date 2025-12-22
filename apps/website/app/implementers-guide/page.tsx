@@ -10,6 +10,7 @@ import rehypeSlug from 'rehype-slug';
 import 'highlight.js/styles/github.css';
 import Breadcrumbs from "../components/Breadcrumbs";
 import QuickLinks from "../components/QuickLinks";
+import Navbar from "../components/Navbar";
 
 export default function ImplementersGuidePage() {
   const [markdown, setMarkdown] = useState<string>('');
@@ -18,7 +19,10 @@ export default function ImplementersGuidePage() {
 
   useEffect(() => {
     fetch('/Standard/docs/implementers-guide.md')
-      .then(res => res.text())
+      .then(res => {
+        if (!res.ok) throw new Error('Failed to load document');
+        return res.text();
+      })
       .then(text => {
         setMarkdown(text);
         setLoading(false);
@@ -73,21 +77,7 @@ export default function ImplementersGuidePage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Navigation */}
-      <nav className="bg-slate-900">
-        <div className="w-full max-w-7xl mx-auto px-8 py-4 flex justify-between items-center">
-          <a href="/" className="text-white text-2xl font-bold">
-            JSON Agents
-          </a>
-          <div className="flex space-x-8">
-            <a href="/getting-started" className="text-white hover:text-gray-200 text-base font-medium">Getting Started</a>
-            <a href="/schema" className="text-white hover:text-gray-200 text-base font-medium">Schema</a>
-            <a href="/docs" className="text-white hover:text-gray-200 text-base font-medium">Docs</a>
-            <a href="https://github.com/JSON-AGENTS/Standard" className="text-white hover:text-gray-200 flex items-center gap-2" aria-label="GitHub">
-              <Github size={24} strokeWidth={2} />
-            </a>
-          </div>
-        </div>
-      </nav>
+      <Navbar />
 
       <Breadcrumbs items={[
         { label: "Docs", href: "/docs" },
@@ -95,9 +85,9 @@ export default function ImplementersGuidePage() {
       ]} />
 
       {/* Hero */}
-      <section className="bg-gray-200 py-16">
-        <div className="w-full max-w-4xl mx-auto px-8">
-          <h1 className="text-5xl mb-4 text-gray-900" style={{ fontFamily: '"Momo Trust Display", sans-serif', fontWeight: 400 }}>
+      <section className="bg-gray-200 py-12 md:py-16">
+        <div className="w-full max-w-4xl mx-auto px-4 md:px-8">
+          <h1 className="text-3xl md:text-5xl mb-4 text-gray-900" style={{ fontFamily: '"Momo Trust Display", sans-serif', fontWeight: 400 }}>
             Implementer's Guide
           </h1>
           <p className="text-xl text-gray-700">
