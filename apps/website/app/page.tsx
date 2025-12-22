@@ -43,7 +43,7 @@ export default function HomePage() {
               <div>
                 <a
                   href="/getting-started"
-                  className="inline-block px-8 py-2 border border-gray-400 text-gray-700 text-xs font-medium uppercase tracking-wider rounded hover:bg-gray-50 transition"
+                  className="inline-block px-8 py-2 border border-gray-400 text-gray-700 text-xs font-medium uppercase tracking-wider rounded hover:bg-gray-50 transition whitespace-nowrap"
                 >
                   GET STARTED
                 </a>
@@ -58,7 +58,7 @@ export default function HomePage() {
               <div>
                 <a
                   href="/schema"
-                  className="inline-block px-8 py-2 border border-gray-400 text-gray-700 text-xs font-medium uppercase tracking-wider rounded hover:bg-gray-50 transition"
+                  className="inline-block px-8 py-2 border border-gray-400 text-gray-700 text-xs font-medium uppercase tracking-wider rounded hover:bg-gray-50 transition whitespace-nowrap"
                 >
                   VIEW SCHEMAS
                 </a>
@@ -73,7 +73,7 @@ export default function HomePage() {
               <div>
                 <a
                   href="/cli"
-                  className="inline-block px-8 py-2 border border-gray-400 text-gray-700 text-xs font-medium uppercase tracking-wider rounded hover:bg-gray-50 transition"
+                  className="inline-block px-8 py-2 border border-gray-400 text-gray-700 text-xs font-medium uppercase tracking-wider rounded hover:bg-gray-50 transition whitespace-nowrap"
                 >
                   VIEW CLI
                 </a>
@@ -88,7 +88,7 @@ export default function HomePage() {
               <div>
                 <a
                   href="/validators"
-                  className="inline-block px-8 py-2 border border-gray-400 text-gray-700 text-xs font-medium uppercase tracking-wider rounded hover:bg-gray-50 transition"
+                  className="inline-block px-8 py-2 border border-gray-400 text-gray-700 text-xs font-medium uppercase tracking-wider rounded hover:bg-gray-50 transition whitespace-nowrap"
                 >
                   VIEW VALIDATORS
                 </a>
@@ -104,7 +104,7 @@ export default function HomePage() {
         <div className="w-full max-w-3xl mx-auto px-4 md:px-8 text-center">
           <a
             href="https://github.com/Json-Agents/Standard"
-            className="inline-flex items-center gap-2 px-8 py-2 border border-gray-400 text-gray-700 text-xs font-medium uppercase tracking-wider rounded hover:bg-gray-50 transition"
+            className="inline-flex items-center gap-2 px-8 py-2 border border-gray-400 text-gray-700 text-xs font-medium uppercase tracking-wider rounded hover:bg-gray-50 transition whitespace-nowrap"
           >
             <Github size={16} strokeWidth={2} />
             VIEW ON GITHUB
