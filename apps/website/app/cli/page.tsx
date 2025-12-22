@@ -42,7 +42,7 @@ export default function CLIPage() {
           {/* Installation */}
           <div className="mb-16">
             <h2 className="text-3xl text-gray-900 font-light mb-6">Installation</h2>
-            <div className="bg-gray-50 p-6 rounded-lg font-mono text-sm mb-4">
+            <div className="bg-gray-50 p-6 rounded-lg font-mono text-sm mb-4 overflow-x-auto">
               <div className="mb-2 text-gray-600"># Install globally (coming soon)</div>
               <div className="text-gray-800">npm install -g @jsonagents/cli</div>
               <div className="mt-4 mb-2 text-gray-600"># Or use via npx (coming soon)</div>
@@ -62,7 +62,7 @@ export default function CLIPage() {
               <div className="border-l-4 border-slate-800 pl-6">
                 <h3 className="text-xl font-medium text-gray-900 mb-2">init</h3>
                 <p className="text-gray-700 mb-3">Create a new JSON Agents manifest interactively</p>
-                <div className="bg-gray-50 text-gray-800 p-4 rounded font-mono text-sm">
+                <div className="bg-gray-50 text-gray-800 p-4 rounded font-mono text-sm overflow-x-auto">
                   jsonagents init
                 </div>
               </div>
@@ -71,7 +71,7 @@ export default function CLIPage() {
               <div className="border-l-4 border-slate-800 pl-6">
                 <h3 className="text-xl font-medium text-gray-900 mb-2">validate</h3>
                 <p className="text-gray-700 mb-3">Validate manifests against the JSON Schema with watch mode support</p>
-                <div className="bg-gray-50 text-gray-800 p-4 rounded font-mono text-sm">
+                <div className="bg-gray-50 text-gray-800 p-4 rounded font-mono text-sm overflow-x-auto">
                   <div className="mb-2">jsonagents validate manifest.json</div>
                   <div className="text-gray-600"># Watch for changes</div>
                   <div>jsonagents validate manifest.json --watch</div>
@@ -82,7 +82,7 @@ export default function CLIPage() {
               <div className="border-l-4 border-slate-800 pl-6">
                 <h3 className="text-xl font-medium text-gray-900 mb-2">convert</h3>
                 <p className="text-gray-700 mb-3">Convert between JSON and YAML formats</p>
-                <div className="bg-gray-50 text-gray-800 p-4 rounded font-mono text-sm">
+                <div className="bg-gray-50 text-gray-800 p-4 rounded font-mono text-sm overflow-x-auto">
                   <div className="mb-2">jsonagents convert manifest.json manifest.yaml</div>
                   <div>jsonagents convert manifest.yaml manifest.json</div>
                 </div>
@@ -92,7 +92,7 @@ export default function CLIPage() {
               <div className="border-l-4 border-slate-800 pl-6">
                 <h3 className="text-xl font-medium text-gray-900 mb-2">format</h3>
                 <p className="text-gray-700 mb-3">Format JSON files (pretty-print or minify)</p>
-                <div className="bg-gray-50 text-gray-800 p-4 rounded font-mono text-sm">
+                <div className="bg-gray-50 text-gray-800 p-4 rounded font-mono text-sm overflow-x-auto">
                   <div className="mb-2">jsonagents format manifest.json</div>
                   <div>jsonagents format manifest.json --minify</div>
                 </div>
@@ -102,7 +102,7 @@ export default function CLIPage() {
               <div className="border-l-4 border-slate-800 pl-6">
                 <h3 className="text-xl font-medium text-gray-900 mb-2">info</h3>
                 <p className="text-gray-700 mb-3">Display detailed information about a manifest</p>
-                <div className="bg-gray-50 text-gray-800 p-4 rounded font-mono text-sm">
+                <div className="bg-gray-50 text-gray-800 p-4 rounded font-mono text-sm overflow-x-auto">
                   jsonagents info manifest.json
                 </div>
               </div>
@@ -111,7 +111,7 @@ export default function CLIPage() {
               <div className="border-l-4 border-slate-800 pl-6">
                 <h3 className="text-xl font-medium text-gray-900 mb-2">search</h3>
                 <p className="text-gray-700 mb-3">Search for agents in the registry</p>
-                <div className="bg-gray-50 text-gray-800 p-4 rounded font-mono text-sm">
+                <div className="bg-gray-50 text-gray-800 p-4 rounded font-mono text-sm overflow-x-auto">
                   jsonagents search customer-support
                 </div>
               </div>
@@ -120,7 +120,7 @@ export default function CLIPage() {
               <div className="border-l-4 border-slate-800 pl-6">
                 <h3 className="text-xl font-medium text-gray-900 mb-2">fetch</h3>
                 <p className="text-gray-700 mb-3">Download manifests from the registry or URL</p>
-                <div className="bg-gray-50 text-gray-800 p-4 rounded font-mono text-sm">
+                <div className="bg-gray-50 text-gray-800 p-4 rounded font-mono text-sm overflow-x-auto">
                   <div className="mb-2">jsonagents fetch agent-id ./output.json</div>
                   <div>jsonagents fetch https://example.com/manifest.json</div>
                 </div>
@@ -130,7 +130,7 @@ export default function CLIPage() {
               <div className="border-l-4 border-slate-800 pl-6">
                 <h3 className="text-xl font-medium text-gray-900 mb-2">test-policy</h3>
                 <p className="text-gray-700 mb-3">Test policy expressions with custom context</p>
-                <div className="bg-gray-50 text-gray-800 p-4 rounded font-mono text-sm">
+                <div className="bg-gray-50 text-gray-800 p-4 rounded font-mono text-sm overflow-x-auto">
                   jsonagents test-policy "user.role === 'admin'"
                 </div>
               </div>
@@ -139,7 +139,7 @@ export default function CLIPage() {
               <div className="border-l-4 border-slate-800 pl-6">
                 <h3 className="text-xl font-medium text-gray-900 mb-2">test-uri</h3>
                 <p className="text-gray-700 mb-3">Validate and parse ajson:// URIs</p>
-                <div className="bg-gray-50 text-gray-800 p-4 rounded font-mono text-sm">
+                <div className="bg-gray-50 text-gray-800 p-4 rounded font-mono text-sm overflow-x-auto">
                   jsonagents test-uri ajson://example.com/agent/v1
                 </div>
               </div>
