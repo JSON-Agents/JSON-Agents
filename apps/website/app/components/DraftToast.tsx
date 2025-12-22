@@ -43,7 +43,7 @@ export default function DraftToast() {
   if (!isVisible) return null;
 
   return (
-    <div className="fixed bottom-4 left-1/2 -translate-x-1/2 z-50 max-w-md w-full mx-4 animate-slide-up">
+    <div className="fixed bottom-4 left-4 right-4 z-50 max-w-md mx-auto animate-slide-up">
       <div
         className={`bg-white border border-gray-300 rounded-lg shadow-lg p-4 transition-all duration-300 ${
           isClosing ? "opacity-0 translate-y-full" : "opacity-100 translate-y-0"
