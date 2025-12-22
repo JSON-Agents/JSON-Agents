@@ -44,13 +44,13 @@ export default function ValidatorsPage() {
             <h2 className="text-3xl text-gray-900 font-light mb-6">Installation</h2>
             
             <h3 className="text-xl font-medium text-gray-900 mb-4">Python</h3>
-            <div className="bg-gray-50 text-gray-800 p-6 rounded-lg font-mono text-sm mb-6">
+            <div className="bg-gray-50 text-gray-800 p-6 rounded-lg font-mono text-sm mb-6 overflow-x-auto">
               <div className="mb-2 text-gray-600"># Install via pip (coming soon)</div>
               <div>Coming soon.</div>
             </div>
 
             <h3 className="text-xl font-medium text-gray-900 mb-4">TypeScript/JavaScript</h3>
-            <div className="bg-gray-50 text-gray-800 p-6 rounded-lg font-mono text-sm mb-4">
+            <div className="bg-gray-50 text-gray-800 p-6 rounded-lg font-mono text-sm mb-4 overflow-x-auto">
               <div className="mb-2 text-gray-600"># Install via npm (coming soon)</div>
               <div>Coming soon.</div>
             </div>
@@ -163,13 +163,13 @@ console.log(result.valid);`}
             <h2 className="text-3xl text-gray-900 font-light mb-6">Running Tests</h2>
             
             <h3 className="text-xl font-medium text-gray-900 mb-4">Python</h3>
-            <div className="bg-gray-50 text-gray-800 p-4 rounded font-mono text-sm mb-6">
+            <div className="bg-gray-50 text-gray-800 p-4 rounded font-mono text-sm mb-6 overflow-x-auto">
               <div>cd validators/python</div>
               <div>pytest</div>
             </div>
 
             <h3 className="text-xl font-medium text-gray-900 mb-4">TypeScript</h3>
-            <div className="bg-gray-50 text-gray-800 p-4 rounded font-mono text-sm">
+            <div className="bg-gray-50 text-gray-800 p-4 rounded font-mono text-sm overflow-x-auto">
               <div>cd validators/typescript</div>
               <div>npm test</div>
             </div>
