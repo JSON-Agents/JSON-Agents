@@ -54,7 +54,7 @@ export default function GettingStartedPage() {
 
       {/* Main Content */}
       <section className="py-12 md:py-16">
-        <div className="w-full max-w-7xl mx-auto px-4 md:px-8">
+        <div className="w-full max-w-7xl mx-auto px-4 md:px-8 overflow-hidden">
           <div className="flex gap-8">
             {/* Table of Contents Sidebar */}
             <aside className="hidden lg:block w-64 shrink-0">
