@@ -89,22 +89,22 @@ export default function GettingStartedPage() {
             <div className="flex-1 min-w-0">
 
           {/* Quick Steps */}
-          <div className="mb-16">
+          <div className="mb-16 max-w-full">
             <div className="mb-8">
-              <h2 id="three-steps-to-your-first-agent" className="text-3xl text-gray-900 font-light">Three Steps to Your First Agent</h2>
+              <h2 id="three-steps-to-your-first-agent" className="text-2xl md:text-3xl text-gray-900 font-light break-words">Three Steps to Your First Agent</h2>
             </div>
             
             <div className="space-y-8">
               
               {/* Step 1 */}
-              <div className="border-l-4 border-slate-800 pl-6">
-                <h3 className="text-2xl font-medium text-gray-900 mb-3">1. Define Your Agent</h3>
-                <p className="text-gray-700 mb-4">
+              <div className="border-l-4 border-slate-800 pl-4 md:pl-6">
+                <h3 className="text-xl md:text-2xl font-medium text-gray-900 mb-3 break-words">1. Define Your Agent</h3>
+                <p className="text-gray-700 mb-4 break-words">
                   Create a JSON manifest with the <strong>Core Profile</strong> to describe your agent's identity,
                   capabilities, and tools:
                 </p>
-                <div className="bg-gray-50 p-6 rounded-lg overflow-x-auto">
-                  <pre className="text-sm"><code>{`{
+                <div className="bg-gray-50 p-4 md:p-6 rounded-lg overflow-x-auto max-w-full">
+                  <pre className="text-xs md:text-sm whitespace-pre-wrap break-all md:whitespace-pre md:break-normal"><code>{`{
   "agentId": "summarizer-v1",
   "agentName": "Document Summarizer",
   "version": "1.0.0",
@@ -135,35 +135,35 @@ export default function GettingStartedPage() {
               </div>
 
               {/* Step 2 */}
-              <div className="border-l-4 border-slate-800 pl-6">
-                <h3 className="text-2xl font-medium text-gray-900 mb-3">2. Validate Your Manifest</h3>
-                <p className="text-gray-700 mb-4">
+              <div className="border-l-4 border-slate-800 pl-4 md:pl-6">
+                <h3 className="text-xl md:text-2xl font-medium text-gray-900 mb-3 break-words">2. Validate Your Manifest</h3>
+                <p className="text-gray-700 mb-4 break-words">
                   Use the canonical JSON Schema to validate your manifest:
                 </p>
-                <div className="bg-gray-50 p-6 rounded-lg">
+                <div className="bg-gray-50 p-4 md:p-6 rounded-lg overflow-hidden">
                   <p className="text-sm text-gray-700 mb-2">
                     Download the schema:
                   </p>
-                  <code className="block bg-white p-3 rounded text-sm text-slate-800 mb-4 overflow-x-auto">
+                  <code className="block bg-white p-2 md:p-3 rounded text-xs md:text-sm text-slate-800 mb-4 overflow-x-auto break-all">
                     wget https://json-agents.org/Standard/schema/json-agents.json
                   </code>
                   <p className="text-sm text-gray-700 mb-2">
                     Validate with <a href="https://ajv.js.org/" className="text-slate-700 underline">AJV</a> or similar:
                   </p>
-                  <code className="block bg-white p-3 rounded text-sm text-slate-800">
+                  <code className="block bg-white p-2 md:p-3 rounded text-xs md:text-sm text-slate-800 overflow-x-auto break-all">
                     npx ajv validate -s json-agents.json -d your-agent.json
                   </code>
                 </div>
               </div>
 
               {/* Step 3 */}
-              <div className="border-l-4 border-slate-800 pl-6">
-                <h3 className="text-2xl font-medium text-gray-900 mb-3">3. Use in Your Framework</h3>
-                <p className="text-gray-700 mb-4">
+              <div className="border-l-4 border-slate-800 pl-4 md:pl-6">
+                <h3 className="text-xl md:text-2xl font-medium text-gray-900 mb-3 break-words">3. Use in Your Framework</h3>
+                <p className="text-gray-700 mb-4 break-words">
                   Load your manifest in any compatible framework:
                 </p>
-                <div className="bg-gray-50 p-6 rounded-lg overflow-x-auto">
-                  <pre className="text-sm"><code>{`// Python example
+                <div className="bg-gray-50 p-4 md:p-6 rounded-lg overflow-x-auto max-w-full">
+                  <pre className="text-xs md:text-sm whitespace-pre-wrap break-all md:whitespace-pre md:break-normal"><code>{`// Python example
 import json
 from your_framework import load_agent
 
@@ -179,40 +179,40 @@ agent.run("Summarize this document...")`}</code></pre>
           </div>
 
           {/* Progressive Enhancement */}
-          <div className="mb-16">
-            <h2 id="progressive-enhancement" className="text-3xl text-gray-900 font-light mb-3">Progressive Enhancement</h2>
-            <p className="text-gray-600 mb-8">
+          <div className="mb-16 max-w-full">
+            <h2 id="progressive-enhancement" className="text-2xl md:text-3xl text-gray-900 font-light mb-3 break-words">Progressive Enhancement</h2>
+            <p className="text-gray-600 mb-8 break-words">
               Add more profiles as your needs grow
             </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
               
-              <div className="bg-gray-50 border border-gray-300 rounded-lg p-6">
+              <div className="bg-gray-50 border border-gray-300 rounded-lg p-4 md:p-6">
                 <div className="mb-4">
                   <code className="px-2 py-1 bg-white border border-gray-300 rounded text-sm font-mono text-slate-800">exec</code>
                 </div>
-                <h3 className="text-lg font-medium text-gray-900 mb-2">Runtime Configuration</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
+                <h3 className="text-base md:text-lg font-medium text-gray-900 mb-2 break-words">Runtime Configuration</h3>
+                <p className="text-gray-600 text-sm leading-relaxed break-words">
                   Specify deployment environments, model providers, and resource requirements
                 </p>
               </div>
 
-              <div className="bg-gray-50 border border-gray-300 rounded-lg p-6">
+              <div className="bg-gray-50 border border-gray-300 rounded-lg p-4 md:p-6">
                 <div className="mb-4">
                   <code className="px-2 py-1 bg-white border border-gray-300 rounded text-sm font-mono text-slate-800">gov</code>
                 </div>
-                <h3 className="text-lg font-medium text-gray-900 mb-2">Governance</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
+                <h3 className="text-base md:text-lg font-medium text-gray-900 mb-2 break-words">Governance</h3>
+                <p className="text-gray-600 text-sm leading-relaxed break-words">
                   Enable security policies, observability, and compliance features
                 </p>
               </div>
 
-              <div className="bg-gray-50 border border-gray-300 rounded-lg p-6">
+              <div className="bg-gray-50 border border-gray-300 rounded-lg p-4 md:p-6">
                 <div className="mb-4">
                   <code className="px-2 py-1 bg-white border border-gray-300 rounded text-sm font-mono text-slate-800">graph</code>
                 </div>
-                <h3 className="text-lg font-medium text-gray-900 mb-2">Multi-Agent Orchestration</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
+                <h3 className="text-base md:text-lg font-medium text-gray-900 mb-2 break-words">Multi-Agent Orchestration</h3>
+                <p className="text-gray-600 text-sm leading-relaxed break-words">
                   Define agent networks with conditional routing and message flows
                 </p>
               </div>
