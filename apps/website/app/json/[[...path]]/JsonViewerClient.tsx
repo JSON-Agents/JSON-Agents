@@ -127,7 +127,7 @@ export default function JsonViewerClient({ path }: JsonViewerClientProps) {
             </div>
 
             {/* JSON Viewer */}
-            <div className="mb-12">
+            <div className="mb-12 overflow-x-auto">
               <h2 className="text-2xl font-light text-slate-900 mb-4" style={{ fontFamily: 'Momo Trust Display, serif' }}>
                 JSON Content
               </h2>
