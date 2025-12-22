@@ -5,6 +5,18 @@ This project adheres to [Semantic Versioning 2.0.0](https://semver.org/).
 
 ---
 
+## [1.0.2] — 2025-12-22
+**Website Improvements and Maintenance**
+
+### Changed
+
+- **Website** (`apps/website/`)
+  - Updated dependencies to Next.js 16.1.0 and React 19.2.3.
+  - Implemented a responsive `Navbar` component for consistent navigation across all pages.
+  - Improved mobile UI responsiveness for hero sections and navigation.
+  - Fixed 404 errors on documentation pages by correctly serving the `Standard` directory.
+  - Resolved security vulnerabilities.
+
 ## [1.0.1] — 2025-11-12
 **Tooling and Documentation Release**
 
